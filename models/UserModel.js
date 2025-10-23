@@ -29,7 +29,25 @@ const UserSchema = new mongoose.Schema({
         type: Number, 
         default: 0 
     },
-    gameGuess: Number // Stores the secret number the user needs to guess
+    gameGuess: Number, // Stores the secret number the user needs to guess
+
+
+    currentStreak: { 
+        type: Number, 
+        default: 0 
+    },
+    lastActivityDate: { 
+        type: Date, 
+        default: null 
+    },
+    longestStreak: { 
+        type: Number, 
+        default: 0 
+    },
+    totalScore: { 
+        type: Number, 
+        default: 0
+    },    
     
     // Note: All fields must be inside this main object block
 }); // <-- The schema object and function call correctly close here
